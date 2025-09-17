@@ -2,7 +2,7 @@
 
 ## Challenge: Deploy Online Boutique with Wallarm WAF and Test with GoTestWAF
 
-This challenge demonstrates how to deploy the [Google Online Boutique](https://github.com/GoogleCloudPlatform/microservices-demo) demo application on a **K3s Kubernetes cluster**, protect it with **Wallarm WAF**, and validate the protection using **GoTestWAF**.
+This challenge demonstrates how to deploy the [Online Boutique](https://github.com/GoogleCloudPlatform/microservices-demo) demo application on a **K3s Kubernetes cluster**, protect it with **Wallarm WAF**, and validate the protection using **GoTestWAF**.
 
 ---
 * [Prerequisites](#prerequisites)
