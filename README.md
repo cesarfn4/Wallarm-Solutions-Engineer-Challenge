@@ -256,7 +256,7 @@ Wallarm Architecture:
 
 ## 5. Change Wallarm Filtering Mode
 
-Filtration mode defines the filtering node behavior when processing incoming requests. These instructions describe available filtration modes and their configuration methods.
+[Filtration](https://docs.wallarm.com/admin-en/configure-wallarm-mode/#nginx-ingress-controller) mode defines the filtering node behavior when processing incoming requests. These instructions describe available filtration modes and their configuration methods.
 
 Wallarm supports:
 
