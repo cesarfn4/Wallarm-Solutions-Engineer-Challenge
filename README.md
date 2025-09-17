@@ -125,7 +125,7 @@ Additionaly, we can check if the Wallarm filter node is regitered correctly from
 
 ## Expose Online Boutique Through Wallarm
 
-1. In my case, since I already had the Nginx Ingress Controller running on my K3s cluster, I had to patch the Wallarm Service (the wallarm-ingress-controller one) to listen on different ports, 8080 and 8443.
+1. Since I already had the Nginx Ingress Controller deployed on my K3s cluster, I had to patch the Wallarm Service (the wallarm-ingress-controller one) to listen on different ports, 8080 and 8443.
 
 ```yaml
 apiVersion: v1
