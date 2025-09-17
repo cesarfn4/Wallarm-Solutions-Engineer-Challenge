@@ -6,16 +6,15 @@ This challenge demonstrates how to deploy the [Google Online Boutique](https://g
 
 ---
 * [Prerequisites](#prerequisites)
-* [Deploy Online Boutique Application](#deploy-onlineboutique-app)
-* [Deploy Wallarm Ingress Controller](#deploy-wallarm-ingress)
-* [Expose Online Boutique Through Wallarm](#expose-onlineboutique-wallarm)
-* [Change Wallarm Filtering Mode](#change-wallarm-filtering)
+* [Deploy Online Boutique Application](#deploy-online-boutique-application)
+* [Deploy Wallarm Ingress Controller](#deploy-wallarm-ingress-controller)
+* [Expose Online Boutique Through Wallarm](#expose-online-boutique-through-wallarm)
+* [Change Wallarm Filtering Mode](#change-wallarm-filtering-mode)
 * [Run GoTestWAF](#run-gotestwaf)
-* [Running with OWASP Core Rule Set regression testing suite](#running-with-owasp-core-rule-set-regression-testing-suite)
 ---
 
 
-## 1. Prerequisites
+## Prerequisites
 
 - A running **K3s** (or Kubernetes) cluster with:
   - 1 server node
@@ -26,7 +25,7 @@ This challenge demonstrates how to deploy the [Google Online Boutique](https://g
 
 ---
 
-## 2. Deploy Online Boutique Application
+## Deploy Online Boutique Application
 
 Clone the repository and deploy into a dedicated namespace:
 
@@ -69,7 +68,7 @@ Online Boutique is composed of 11 microservices written in different languages t
 ![alt text](images/onlineboutique-cart.png)
 
 
-## 3. Deploy Wallarm Ingress Controller
+## Deploy Wallarm Ingress Controller
 
 To install the [Wallarm Ingress Controller](https://docs.wallarm.com/admin-en/installation-kubernetes-en/#step-1-installing-the-wallarm-ingress-controller):
 
@@ -124,7 +123,7 @@ Additionaly, we can check if the Wallarm filter node is regitered correctly from
 
 ![alt text](images/wallarm-consonole-nodes.png)
 
-## 4. Expose Online Boutique Through Wallarm
+## Expose Online Boutique Through Wallarm
 
 1. In my case, since I already had the Nginx Ingress Controller running on my K3s cluster, I had to patch the Wallarm Service (the wallarm-ingress-controller one) to listen on different ports, 8080 and 8443.
 
@@ -254,7 +253,7 @@ Wallarm Architecture:
 
 ![alt text](images/wallarm-console-api.png)
 
-## 5. Change Wallarm Filtering Mode
+## Change Wallarm Filtering Mode
 
 [Filtration](https://docs.wallarm.com/admin-en/configure-wallarm-mode/#nginx-ingress-controller) mode defines the filtering node behavior when processing incoming requests. These instructions describe available filtration modes and their configuration methods.
 
@@ -306,7 +305,7 @@ spec:
     secretName: onlineboutique-tls
 ```
 
-## 6. Run GoTestWAF
+## Run GoTestWAF
 
 [GoTestWAF](https://github.com/wallarm/gotestwaf) is a tool for API and OWASP attack simulation that supports a wide range of API protocols including REST, GraphQL, gRPC, SOAP, XMLRPC, and others.
 
